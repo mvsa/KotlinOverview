@@ -1,0 +1,79 @@
+JRE = quando so preciso executar programs em java
+JDK = quando preciso programar e executar
+
+
+
+Kotlin é compilado e interpretado
+
+terminado o trabalho gera uma compilação e depois um interpretador
+pega esses compilados e entende o arquivo pra falar com cada SO
+
+quando vc tem uma liguagem compilada é feito um check sintatico
+se o que esta sendo feito ira passar. diferente do JS que quebra
+apenas em tempo de execução
+
+posso compilar/interpretar na linguagem final que eu quiser.
+posso transformar em java (Kotlin JVM), Javascript(Kotlin/JS)
+e nativo Android Ios(Kotlin/native)
+
+commonMain = javaMain, jsmain, macosmain, linuxmain, windows
+
+gradle, gerenciamento de dependencias
+N preciso de ;
+
+Tem nullsafety para lançamento de  exceções
+
+
+{
+Created projetct.
+src > new Kotlin class/file > file
+Visto que ele é poo e funcional posso criar um file sem ter a classe
+se fizer sentido pro meu projeto
+
+}
+
+{
+tipos primitivos:
+int, long, boolean, string, char, float, double, byte
+
+}
+
+{
+variaveis:
+var a:Int
+var b:Long
+var letra:char = 'c'
+
+var idade=18 (tipagem por inferencia)
+var char = 'c' (tipagem por inferencia char)
+var stirng = "c" (tipagem por inferencia string)
+
+Constantes:
+val primeiraLetra:Char = 'C'
+
+}
+para gerenciar argumentos da main
+Modify Run COnfigurations (na seta)
+ou no canto superior direito = edit configuration
+
+"program arguments"
+
+shift f10 para executar
+
+----------------
+
+
+{
+
+
+
+
+
+}
+
+
+----------------------
+
+{
+
+
