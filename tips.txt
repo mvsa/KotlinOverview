@@ -65,7 +65,18 @@ shift f10 para executar
 
 {
 
+for / while/dowhile
+não tem foreach, ele já é imbutido dentro do for
 
+
+
+for(produto in produtosArray){      /foreach
+	//algo
+}
+
+for(pneustrocados in 0..4){}
+
+for(contadorDec in 10 downTo 0 step 2){}
 
 
 
@@ -75,5 +86,30 @@ shift f10 para executar
 ----------------------
 
 {
+List é uma classe com diversos atributos e metodos
+e Array embora tenha atributos e metodos está mais proximo a um tipo primitivo
+
+var notas = IntArray(6){90,23,23,23}  //definindo o tamanho do array ele n poder mudar, vai ser sempre 6
+val notas = mutableListOf(90,23,23) //listas podem ser mutaveis
+
+principais metodos de gestão de listas/array:
+filter = igual a Js
+first. pega o primeiro item da lista, e caso seja vazia retorna null ou zero
+.last = inverso do de cima
+sortedBy/ sortedByDescending 
+groupBy
+
+----
+Função anonima= função passada como parametro em outra função em ordem de prover seu correto funcionamento
+Exempo, num metodo filter vai ser passsada a função com a regra em que a filtragem será avalida
+
+polimorfismo - defino uma função aberta (que pode ser overrided por seus filhos) com open fun nome()
+e nos filhos apos herdar (class quadrado:forma) faço override fun nome()
+
+
+interface/implementação
+
+class conta:Interface1, Interface2
+-----------------------------------------------------------------------------
 
 
