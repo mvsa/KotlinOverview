@@ -1,0 +1,10 @@
+https://start.spring.io/
+
+
+arquivo application.properties recebe as config necessarias do projeto
+ex. URL de banco de dados
+conexão com jwt
+chave secreta de criptografia
+porta do servidor
+
+new package controllers

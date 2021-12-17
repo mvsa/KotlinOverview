@@ -18,7 +18,14 @@ e nativo Android Ios(Kotlin/native)
 
 commonMain = javaMain, jsmain, macosmain, linuxmain, windows
 
-gradle, gerenciamento de dependencias
+gradle, gerenciamento de dependencias (oficial do android)
+MAVEM = gestão de dependencias (antiga)
+
+.pomxml, utilizado pelo Maven
+
+build.gradle = utilizado pelo gradle
+
+
 N preciso de ;
 
 Tem nullsafety para lançamento de  exceções
@@ -111,5 +118,65 @@ interface/implementação
 
 class conta:Interface1, Interface2
 -----------------------------------------------------------------------------
+
+PARTICULARIDADES DO KOTLIN:
+
+tanto oop quanto funcional
+
+Data class = propriedade que pode ser definida em classes indicando que ela so sera usada para guardar dados. Adicionando novas operaçãoes
+como: .equals()  /  .toString()    / .copy()
+data class Usuario()
+
+Lateinit = propriedade que conseguimos adicionar a um atributo de classe; fazendo que o carregamento dele ocorra apenas quando ele for carregado a primera vez
+melhorando performance, carregando itens so quando necessario
+
+
+public class Teste{
+	lateinit var subject:TestSubject // 1 var ainda n iniciada
+
+	@Setup fun setup(){
+		subject = TestSubject() // 3 sera rodada a função para iniciar o subject
+	}
+
+	@Test fun test(){
+		subject.method() // 2 foi chamado o metodo mas o subject ainda n ta iniciado
+	}
+
+}
+
+
+Dependency Injection
+Posso definir quais arquivos serão singleton e importa-los no contrutor da classe que irão utilizar
+
+@Autowired // com o autowired vou procurar em todos os meus arquivos se tem algum que implementa o tipo testRet, sem que eu explicite ele (feito no node)
+lateinit var testeRet:testRet
+
+
+Extension = permitem que vc adicione a tipos existentes sem criar um novo tipo derivado
+
+fun String.contaCaracteres():Int{  //todo mundo que for string vai ter a função contaCaracteres() agora
+	return this.size()
+}
+
+
+Reflection - fornece objetos do tipo Type que descrevem assemblies, modulos e tipos
+é possivel usar reflexão para criar dinamicamente uma instancia de um tipo, associar o tipo a um objeto existente ou obter o tipo de um obj existente
+e invocar seus metodos ou acessar suas propriedades e campos
+
+o reflection olha pro molde (type) e não pro objeto
+
+val x = 1
+fun main(){
+	println(::x.get()) //retorna 1
+	println(::x.name) //retorna o nome x
+}
+
+anotations
+@jAsei  //insere comportamentos ja implementados dentro de outra classe
+
+-----------------------------------
+
+
+
 
 
